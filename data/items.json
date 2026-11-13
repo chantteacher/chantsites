@@ -150,14 +150,15 @@
       "cat": "cat-0",
       "sub": "sub-0-0",
       "id": "586f5074-ac61-4bcb-95fd-c5e23eaa4c84",
-      "title": "기하) 좌표탈출 미션게임",
+      "title": "좌표탈출 미션게임",
       "links": [
         {
           "label": "",
           "url": "https://3d-team-mission-game-show-version.pages.dev/"
         }
       ],
-      "files": []
+      "files": [],
+      "updatedAt": 1794567981517
     },
     {
       "desc": "벡터 개념을 활용해 바람을 분석하는 활동 웹페이지입니다.\n교사코드 필요하신 분은 연락주세요.",
