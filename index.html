@@ -73,7 +73,8 @@ h1{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 14px;font-size:13px;cursor:pointer;color:var(--muted)}
 .chip:hover{border-color:var(--accent);color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chip[aria-pressed="true"] .category-mark::before{background:color-mix(in srgb,var(--accent) 88%,var(--ink))}
 .chip .n{opacity:.65;margin-left:4px;font-variant-numeric:tabular-nums}
 
 /* Menu */
@@ -227,12 +228,9 @@ label.f select{color:var(--ink)}
 .pdf-pages .status{margin:0;padding:12px}
 .category-mark{display:inline-block;position:relative;isolation:isolate;padding-inline:.14em;line-height:inherit}
 .category-mark::before{content:"";position:absolute;inset:33% 0 6%;z-index:-1;border-radius:.16em;background:var(--category-mark,#E8D7BE);pointer-events:none}
-.chip[aria-pressed="true"] .category-mark{--category-mark:#79543D}
 :root[data-theme="dark"]{--category-mark:#594234}
-:root[data-theme="dark"] .chip[aria-pressed="true"] .category-mark{--category-mark:#D7AE8C}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){--category-mark:#594234}
-  :root:not([data-theme="light"]) .chip[aria-pressed="true"] .category-mark{--category-mark:#D7AE8C}
 }
 </style>
 <script id="clean-instagram-address">(function(){try{const url=new URL(location.href);let changed=false;for(const key of [...url.searchParams.keys()]){if(/^(utm_.*|fbclid|igshid|igsh|ig_rid|ig_mid)$/i.test(key)){url.searchParams.delete(key);changed=true}}if(changed)history.replaceState(history.state,'',url.href)}catch(_){}})();</script>
