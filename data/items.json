@@ -1,0 +1,217 @@
+{
+  "site": {},
+  "categories": [
+    {
+      "id": "cat-0",
+      "name": "수학",
+      "subs": [
+        {
+          "id": "sub-0-0",
+          "name": "기하"
+        }
+      ]
+    },
+    {
+      "id": "cat-1",
+      "name": "업무",
+      "subs": []
+    },
+    {
+      "id": "cat-2",
+      "name": "게임",
+      "subs": []
+    },
+    {
+      "id": "cat-3",
+      "name": "기타",
+      "subs": []
+    }
+  ],
+  "items": [
+    {
+      "id": "331f7fe3-262a-4926-aa6d-dfb668f11574",
+      "title": "매일 꾸준히 mathson 앱",
+      "desc": "2022 개정 교육과정 수학 과목 중 골라서, 매일 꾸준히 7문제씩 365일 문제 푸는 앱! (특정 문제집 문항을 복제하지 않았음)",
+      "cat": "cat-0",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://mathson.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "f3678280-56d7-4fbe-a92b-bfc66402edcf",
+      "title": "수업 룰렛",
+      "desc": "기하 개념이 반영된 룰렛 사이트입니다.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://chantteacher.github.io/math-geometry-roulette1/"
+        }
+      ],
+      "files": [],
+      "updatedAt": 1794567948337
+    },
+    {
+      "id": "93b22fe2-4f3d-424a-ad15-4411a378061b",
+      "title": "썰매타고 설산으로",
+      "desc": "크리스마스가 다가오고 있는 이 시점에, 썰매 타고 달리면서 설산의 풍경을 바라보고 마음의 평안을 찾고자 만든 웹페이지입니다.",
+      "cat": "cat-2",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://snow-mountain.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "760c28eb-66c8-43f8-9d92-2c82ce09cca9",
+      "title": "기하) 3D 우리 학교 드론 배송 미션 게임",
+      "desc": "공간좌표 개념이 반영된 드론 배송 미션 게임 링크입니다. 교사용 현황판과 서버 연결 없는 버전입니다.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://geometry-3d-drone-game.pages.dev/"
+        }
+      ],
+      "files": [
+        {
+          "path": "embedded/legacy-3.pdf",
+          "fileName": "드론배송_안내문_1장.pdf",
+          "sizeBytes": 102364
+        }
+      ]
+    },
+    {
+      "id": "14f4e64e-39e8-4c7c-84ba-97d04c0c88b8",
+      "title": "행사일정 달력",
+      "desc": "체험판 링크입니다. \n학생용과 교사용 페이지가 따로 있으며, 교사가 등록한 행사 일정은 학생 페이지에 실시간으로 반영됩니다.\n1) 학생용\n- 학교 행사 일정 달력 확인\n- 나만의 일정 다이어리 작성\n2) 교사용 (로그인 필요)\n- 행사 일정 달력 확인\n- 참여 학생 명단 등록·취합·관리\n- 약 100명 정도 이용 가능: 한 학교 규모 충분\n※ 학생 명단은 교사용 페이지에서만 볼 수 있습니다.",
+      "cat": "cat-1",
+      "sub": null,
+      "links": [
+        {
+          "label": "학생용",
+          "url": "https://chantteacher.github.io/school-programs-student/student.html"
+        },
+        {
+          "label": "교사용",
+          "url": "https://chantteacher.github.io/school-programs-student/teacher.html"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "fa65c66f-f397-4cc4-8df5-7f52bee70955",
+      "title": "교직원 연수 등록부",
+      "desc": "교직원 연수 등록부 체험판 링크입니다.",
+      "cat": "cat-1",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://chantteacher.github.io/school-register-try-version/"
+        }
+      ],
+      "files": [
+        {
+          "path": "embedded/legacy-5.pdf",
+          "fileName": "교직원연수등록부_한장요약_프롬프트포함.pdf",
+          "sizeBytes": 822479
+        }
+      ]
+    },
+    {
+      "id": "a910ab72-ffb8-46a0-aadd-ab65ad4391cf",
+      "title": "기하) 이차곡선 FOCUS 동물병원",
+      "desc": "동물 치료 기기 속에 숨어있는 이차곡선 개념을 자연스럽게 접할 수 있는 문제풀이 웹페이지입니다.\n교사 코드 필요하신 분은 개인적으로 연락주세요.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://conic-vet-show-version.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "586f5074-ac61-4bcb-95fd-c5e23eaa4c84",
+      "title": "기하) 좌표탈출 미션게임",
+      "desc": "교사 현황판과의 서버 연결은 없는 좌표탈출 미션게임 링크입니다.\n교사 코드 필요하신 분은 개인적으로 연락주세요.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://3d-team-mission-game-show-version.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "c2cdbab9-e5dc-4ce1-a0c0-5b48bcb274f6",
+      "title": "기하) 태풍 GIHA 특보데스크",
+      "desc": "벡터 개념을 활용해 바람을 분석하는 활동 웹페이지입니다.\n교사코드 필요하신 분은 연락주세요.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://typhoondesk.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "dd435e3d-0a94-4c71-b3d8-571882894622",
+      "title": "기하) 레이저로 위성 잡기",
+      "desc": "벡터 내용 중 직선의 방정식 개념을 활용한 활동입니다.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://vector-line-satellite.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "3f486cd2-e4cf-47d7-8b91-90710716d30e",
+      "title": "김제개 키우기",
+      "desc": "우리학교 마스코트 키우기 웹앱을 소개합니다. 용돈을 벌기 위해서는 미니게임+수학 문제 1개 풀기!! 자연스럽게 수학과 함께하는 다마고치 앱💛",
+      "cat": "cat-2",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://gimjegae.pages.dev/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": "db93bde7-797a-4750-aa28-d1cc158bf8e8",
+      "title": "오목 대결",
+      "desc": "오목 게임 웹앱!",
+      "cat": "cat-2",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://fivedoll-game.pages.dev/"
+        }
+      ],
+      "files": []
+    }
+  ]
+}
