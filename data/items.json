@@ -180,14 +180,15 @@
       "cat": "cat-0",
       "sub": "sub-0-0",
       "id": "dd435e3d-0a94-4c71-b3d8-571882894622",
-      "title": "기하) 레이저로 위성 잡기",
+      "title": "레이저로 위성 잡기",
       "links": [
         {
           "label": "",
           "url": "https://vector-line-satellite.pages.dev/"
         }
       ],
-      "files": []
+      "files": [],
+      "updatedAt": 1794568000971
     },
     {
       "desc": "우리학교 마스코트 키우기 웹앱을 소개합니다. 용돈을 벌기 위해서는 미니게임+수학 문제 1개 풀기!! 자연스럽게 수학과 함께하는 다마고치 앱💛",
