@@ -165,14 +165,15 @@
       "cat": "cat-0",
       "sub": "sub-0-0",
       "id": "c2cdbab9-e5dc-4ce1-a0c0-5b48bcb274f6",
-      "title": "기하) 태풍 GIHA 특보데스크",
+      "title": "태풍 GIHA 특보데스크",
       "links": [
         {
           "label": "",
           "url": "https://typhoondesk.pages.dev/"
         }
       ],
-      "files": []
+      "files": [],
+      "updatedAt": 1794567990940
     },
     {
       "desc": "벡터 내용 중 직선의 방정식 개념을 활용한 활동입니다.",
