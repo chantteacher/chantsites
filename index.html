@@ -612,8 +612,7 @@ label.f select{color:var(--ink)}
     $('dAdmin').hidden = !adminOn();
     $('dUp').disabled = !peerOf(data.items,it,-1);
     $('dDown').disabled = !peerOf(data.items,it,1);
-    const first = files.findIndex(isViewable);
-    showPreview(first);
+    showPreview(-1);
     $('detail').showModal();
   }
   function showPreview(i){
