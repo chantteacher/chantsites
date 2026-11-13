@@ -6,7 +6,7 @@
 <title>찬T의 작은 공간</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: 카페 메뉴판처럼 카테고리 = 메뉴 섹션, 자료 = 점선 리더로 이어진 메뉴 항목 */
 :root{
@@ -71,10 +71,9 @@ h1{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .search input{flex:1;border:0;background:transparent;outline:none;min-width:0}
 .search svg{flex:none;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 14px;font-size:13px;cursor:pointer;color:var(--muted)}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 14px;font-size:13px;font-weight:700;cursor:pointer;color:var(--ink)}
 .chip:hover{border-color:var(--accent);color:var(--ink)}
 .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
-.chip[aria-pressed="true"] .category-mark::before{background:color-mix(in srgb,var(--accent) 88%,var(--ink))}
 .chip .n{opacity:.65;margin-left:4px;font-variant-numeric:tabular-nums}
 
 /* Menu */
@@ -504,12 +503,12 @@ label.f select{color:var(--ink)}
     const count = (id) => data.items.filter(i => (i.cat && catOf(i.cat) ? i.cat : NONE) === id).length;
     const list = [['all','전체',data.items.length], ...cats.map(c => [c.id, c.name, count(c.id)])];
     const none = count(NONE); if (none) list.push([NONE,'미분류',none]);
-    $('chips').innerHTML = list.map(([id,name,n]) => `<button class="chip" data-cat="${esc(id)}" aria-pressed="${prefs.cat===id}"><span class="category-mark">${esc(name)}</span><span class="n">${n}</span></button>`).join('');
+    $('chips').innerHTML = list.map(([id,name,n]) => `<button class="chip" data-cat="${esc(id)}" aria-pressed="${prefs.cat===id}">${esc(name)}<span class="n">${n}</span></button>`).join('');
     const c = catOf(prefs.cat);
     if (c && c.subs.length){
       if (prefs.sub !== 'all' && !subOf(c, prefs.sub)) prefs.sub = 'all';
       $('subChips').hidden = false;
-      $('subChips').innerHTML = [['all','전체'], ...c.subs.map(s => [s.id, s.name])].map(([id,name]) => `<button class="chip" data-sub="${esc(id)}" aria-pressed="${prefs.sub===id}"><span class="category-mark">${esc(name)}</span></button>`).join('');
+      $('subChips').innerHTML = [['all','전체'], ...c.subs.map(s => [s.id, s.name])].map(([id,name]) => `<button class="chip" data-sub="${esc(id)}" aria-pressed="${prefs.sub===id}">${esc(name)}</button>`).join('');
     } else { $('subChips').hidden = true; $('subChips').innerHTML = ''; prefs.sub = 'all'; }
   }
   const rowHTML = (it) => {
