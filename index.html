@@ -221,6 +221,10 @@ label.f select{color:var(--ink)}
 .menu-admin-row{display:flex;align-items:center;gap:10px;min-width:0}
 .menu-admin-row .menu-item{flex:1;min-width:0}
 .menu-admin-row .btn{flex:none}
+.preview .viewer-body.pdf-pages{display:block;min-width:0}
+.pdf-pages canvas{display:block;width:100%;height:auto;background:white}
+.pdf-pages canvas+canvas{border-top:1px solid var(--line)}
+.pdf-pages .status{margin:0;padding:12px}
 </style>
 <script id="clean-instagram-address">(function(){try{const url=new URL(location.href);let changed=false;for(const key of [...url.searchParams.keys()]){if(/^(utm_.*|fbclid|igshid|igsh|ig_rid|ig_mid)$/i.test(key)){url.searchParams.delete(key);changed=true}}if(changed)history.replaceState(history.state,'',url.href)}catch(_){}})();</script>
 </head>
@@ -615,20 +619,69 @@ label.f select{color:var(--ink)}
     showPreview(-1);
     $('detail').showModal();
   }
+  let previewGeneration = 0;
+  let pdfModule;
+  async function renderPdf(url, body, generation){
+    const status = document.createElement('p');
+    status.className = 'status';
+    status.textContent = 'PDF를 불러오는 중…';
+    body.appendChild(status);
+    let task;
+    try {
+      const cdn = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/';
+      const pdfjs = await (pdfModule ||= import(cdn + 'build/pdf.min.mjs').catch(err => {
+        pdfModule = undefined;
+        throw err;
+      }));
+      if (generation !== previewGeneration) return;
+      pdfjs.GlobalWorkerOptions.workerSrc = cdn + 'build/pdf.worker.min.mjs';
+      task = pdfjs.getDocument({url,isEvalSupported:false,standardFontDataUrl:cdn+'standard_fonts/',cMapUrl:cdn+'cmaps/',cMapPacked:true});
+      const pdf = await task.promise;
+      for(let n=1; n<=pdf.numPages && generation===previewGeneration; n++){
+        const page = await pdf.getPage(n);
+        if (generation !== previewGeneration) break;
+        const original = page.getViewport({scale:1});
+        const width = Math.max(1, body.clientWidth) * Math.min(window.devicePixelRatio || 1, 2);
+        const scale = Math.min(width/original.width,4096/Math.max(original.width,original.height));
+        const viewport = page.getViewport({scale});
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.ceil(viewport.width);
+        canvas.height = Math.ceil(viewport.height);
+        canvas.setAttribute('role','img');
+        canvas.setAttribute('aria-label', `PDF ${n}쪽 (전체 ${pdf.numPages}쪽)`);
+        await page.render({canvasContext:canvas.getContext('2d'),viewport}).promise;
+        if (generation !== previewGeneration) break;
+        status.before(canvas);
+        page.cleanup();
+      }
+      status.remove();
+    }catch{
+      if(generation===previewGeneration) status.textContent = '미리보기를 불러오지 못했어요. 아래 ‘새 창에서 열기’를 눌러 주세요.';
+    }finally{
+      if(task) await task.destroy().catch(()=>{});
+    }
+  }
   function showPreview(i){
-    const body = $('vBody'); body.innerHTML = '';
+    const generation = ++previewGeneration;
+    const body = $('vBody'); body.innerHTML = ''; body.classList.remove('pdf-pages'); body.scrollTop = 0;
     document.querySelectorAll('#dFiles .file-row').forEach(r => r.classList.toggle('on', +r.dataset.i === i));
     const f = current && current.files && current.files[i];
     if (!f || !isViewable(f)){ $('dPreview').hidden = true; return; }
     const url = fileUrl(f), ext = extOf(f.fileName); let el;
-    if (ext === 'pdf' || /^(txt|md|csv|json)$/.test(ext)){ el = document.createElement('iframe'); el.src = url; el.title = f.fileName; }
+    if(ext === 'pdf'){
+      body.classList.add('pdf-pages');
+      $('vOpen').href = url; $('dPreview').hidden = false;
+      renderPdf(url,body,generation);
+      return;
+    }
+    if (/^(txt|md|csv|json)$/.test(ext)){ el = document.createElement('iframe'); el.src = url; el.title = f.fileName; }
     else if (/^(mp4|webm)$/.test(ext)){ el = document.createElement('video'); el.src = url; el.controls = true; }
     else { el = document.createElement('img'); el.src = url; el.alt = f.fileName; }
     body.appendChild(el); $('vOpen').href = url; $('dPreview').hidden = false;
   }
   $('dFiles').addEventListener('click', e => { const b = e.target.closest('[data-view]'); if (b) showPreview(+b.dataset.view); });
   $('dClose').addEventListener('click', () => $('detail').close());
-  $('detail').addEventListener('close', () => { $('vBody').innerHTML = ''; });
+  $('detail').addEventListener('close', () => { if (!$('detail').open) showPreview(-1); });
   $('detail').addEventListener('click', e => { if (e.target === $('detail')) $('detail').close(); });
   $('dEdit').addEventListener('click', () => { const it = current; $('detail').close(); openItemEditor(it); });
   $('dDel').addEventListener('click', () => {
