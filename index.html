@@ -225,6 +225,15 @@ label.f select{color:var(--ink)}
 .pdf-pages canvas{display:block;width:100%;height:auto;background:white}
 .pdf-pages canvas+canvas{border-top:1px solid var(--line)}
 .pdf-pages .status{margin:0;padding:12px}
+.category-mark{display:inline-block;position:relative;isolation:isolate;padding-inline:.14em;line-height:inherit}
+.category-mark::before{content:"";position:absolute;inset:33% 0 6%;z-index:-1;border-radius:.16em;background:var(--category-mark,#E8D7BE);pointer-events:none}
+.chip[aria-pressed="true"] .category-mark{--category-mark:#79543D}
+:root[data-theme="dark"]{--category-mark:#594234}
+:root[data-theme="dark"] .chip[aria-pressed="true"] .category-mark{--category-mark:#D7AE8C}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--category-mark:#594234}
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"] .category-mark{--category-mark:#D7AE8C}
+}
 </style>
 <script id="clean-instagram-address">(function(){try{const url=new URL(location.href);let changed=false;for(const key of [...url.searchParams.keys()]){if(/^(utm_.*|fbclid|igshid|igsh|ig_rid|ig_mid)$/i.test(key)){url.searchParams.delete(key);changed=true}}if(changed)history.replaceState(history.state,'',url.href)}catch(_){}})();</script>
 </head>
@@ -497,12 +506,12 @@ label.f select{color:var(--ink)}
     const count = (id) => data.items.filter(i => (i.cat && catOf(i.cat) ? i.cat : NONE) === id).length;
     const list = [['all','전체',data.items.length], ...cats.map(c => [c.id, c.name, count(c.id)])];
     const none = count(NONE); if (none) list.push([NONE,'미분류',none]);
-    $('chips').innerHTML = list.map(([id,name,n]) => `<button class="chip" data-cat="${esc(id)}" aria-pressed="${prefs.cat===id}">${esc(name)}<span class="n">${n}</span></button>`).join('');
+    $('chips').innerHTML = list.map(([id,name,n]) => `<button class="chip" data-cat="${esc(id)}" aria-pressed="${prefs.cat===id}"><span class="category-mark">${esc(name)}</span><span class="n">${n}</span></button>`).join('');
     const c = catOf(prefs.cat);
     if (c && c.subs.length){
       if (prefs.sub !== 'all' && !subOf(c, prefs.sub)) prefs.sub = 'all';
       $('subChips').hidden = false;
-      $('subChips').innerHTML = [['all','전체'], ...c.subs.map(s => [s.id, s.name])].map(([id,name]) => `<button class="chip" data-sub="${esc(id)}" aria-pressed="${prefs.sub===id}">${esc(name)}</button>`).join('');
+      $('subChips').innerHTML = [['all','전체'], ...c.subs.map(s => [s.id, s.name])].map(([id,name]) => `<button class="chip" data-sub="${esc(id)}" aria-pressed="${prefs.sub===id}"><span class="category-mark">${esc(name)}</span></button>`).join('');
     } else { $('subChips').hidden = true; $('subChips').innerHTML = ''; prefs.sub = 'all'; }
   }
   const rowHTML = (it) => {
@@ -535,9 +544,9 @@ label.f select{color:var(--ink)}
       for (const s of sec.subs){
         if (prefs.sub !== 'all' && prefs.sub !== s.id) continue;
         const arr = inSec.filter(i => i.sub === s.id);
-        if (arr.length) body += `<div class="sub-head">${esc(s.name)}</div><div class="list">${arr.map(rowHTML).join('')}</div>`;
+        if (arr.length) body += `<div class="sub-head"><span class="category-mark">${esc(s.name)}</span></div><div class="list">${arr.map(rowHTML).join('')}</div>`;
       }
-      if (body) html += `<section class="section" aria-label="${esc(sec.name)}"><h2>${esc(sec.name)} <small>${inSec.length}</small></h2>${body}</section>`;
+      if (body) html += `<section class="section" aria-label="${esc(sec.name)}"><h2><span class="category-mark">${esc(sec.name)}</span> <small>${inSec.length}</small></h2>${body}</section>`;
     }
     menu.innerHTML = html || `<div class="empty"><strong>찾는 메뉴가 없어요</strong>검색어나 카테고리를 바꿔 보세요.</div>`;
   }
