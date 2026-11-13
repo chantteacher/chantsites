@@ -28,6 +28,16 @@
   ],
   "items": [
     {
+      "id": "mwf2jpie92tt",
+      "title": "행렬2차시(가중치",
+      "desc": "",
+      "cat": null,
+      "sub": null,
+      "links": [],
+      "files": [],
+      "createdAt": 1794579916262
+    },
+    {
       "desc": "그림을 행렬로 바꾸고, 행렬 계산만으로 AI가 그림이 무엇인지 맞히는 원리를 체험하는 웹페이지입니다.",
       "cat": "cat-0",
       "sub": "mwf2fq3s01eg",
