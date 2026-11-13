@@ -28,14 +28,20 @@
   ],
   "items": [
     {
+      "desc": "가중치 행렬로 판단하고, AI를 직접 가르쳐 보며 학습이 무엇인지 알아보는 활동입니다.",
+      "cat": "cat-0",
+      "sub": "mwf2fq3s01eg",
       "id": "mwf2jpie92tt",
-      "title": "행렬2차시(가중치",
-      "desc": "",
-      "cat": null,
-      "sub": null,
-      "links": [],
+      "title": "행렬2차시 (가중치 행렬)",
+      "links": [
+        {
+          "label": "",
+          "url": "https://ai-matrices2.pages.dev/"
+        }
+      ],
       "files": [],
-      "createdAt": 1794579916262
+      "createdAt": 1794579916262,
+      "updatedAt": 1794579979142
     },
     {
       "desc": "그림을 행렬로 바꾸고, 행렬 계산만으로 AI가 그림이 무엇인지 맞히는 원리를 체험하는 웹페이지입니다.",
