@@ -135,14 +135,15 @@
       "cat": "cat-0",
       "sub": "sub-0-0",
       "id": "a910ab72-ffb8-46a0-aadd-ab65ad4391cf",
-      "title": "기하) 이차곡선 FOCUS 동물병원",
+      "title": "이차곡선 FOCUS 동물병원",
       "links": [
         {
           "label": "",
           "url": "https://conic-vet-show-version.pages.dev/"
         }
       ],
-      "files": []
+      "files": [],
+      "updatedAt": 1794567970871
     },
     {
       "desc": "교사 현황판과의 서버 연결은 없는 좌표탈출 미션게임 링크입니다.\n교사 코드 필요하신 분은 개인적으로 연락주세요.",
