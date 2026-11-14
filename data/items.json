@@ -28,19 +28,19 @@
   ],
   "items": [
     {
-      "id": "mwgf6wbdjwrv",
-      "title": "벡터야구 볼파크 게임(2인대전)",
-      "desc": "벡터와 야구에 관한 문제들로 구성된 2인대전 야구 게임입니다. \n각 이닝마다 입장 코드 입력해야 합니다. 교사코드에서는 다 확인 가능합니다. 교사코드 필요하신 분은 연락주세요.",
+      "desc": "기하 개념이 반영된 룰렛 사이트입니다.",
       "cat": "cat-0",
       "sub": "sub-0-0",
+      "id": "f3678280-56d7-4fbe-a92b-bfc66402edcf",
+      "title": "기하 수업 룰렛",
       "links": [
         {
           "label": "",
-          "url": "https://vectorbaseball.pages.dev/"
+          "url": "https://chantteacher.github.io/math-geometry-roulette1/"
         }
       ],
       "files": [],
-      "createdAt": 1794661619737
+      "updatedAt": 1794580099002
     },
     {
       "desc": "가중치 행렬로 판단하고, AI를 직접 가르쳐 보며 학습이 무엇인지 알아보는 활동입니다.\n교사코드 필요하신 분은 개인적으로 연락주세요.",
@@ -89,19 +89,19 @@
       "files": []
     },
     {
-      "desc": "기하 개념이 반영된 룰렛 사이트입니다.",
+      "desc": "벡터와 야구에 관한 문제들로 구성된 2인대전 야구 게임입니다. \n각 이닝마다 입장 코드 입력해야 합니다. 교사코드에서는 다 확인 가능합니다. 교사코드 필요하신 분은 연락주세요.",
       "cat": "cat-0",
       "sub": "sub-0-0",
-      "id": "f3678280-56d7-4fbe-a92b-bfc66402edcf",
-      "title": "기하 수업 룰렛",
+      "id": "mwgf6wbdjwrv",
+      "title": "벡터야구 볼파크 게임(2인대전)",
       "links": [
         {
           "label": "",
-          "url": "https://chantteacher.github.io/math-geometry-roulette1/"
+          "url": "https://vectorbaseball.pages.dev/"
         }
       ],
       "files": [],
-      "updatedAt": 1794580099002
+      "createdAt": 1794661619737
     },
     {
       "desc": "크리스마스가 다가오고 있는 이 시점에, 썰매 타고 달리면서 설산의 풍경을 바라보고 마음의 평안을 찾고자 만든 웹페이지입니다.",
