@@ -31,6 +31,21 @@
   ],
   "items": [
     {
+      "id": "mwijx89zkni5",
+      "title": "벡터 파일럿",
+      "desc": "공간좌표, 공간벡터 비행 훈련을 해보며 벡터 조종사가 되어보는 웹페이지.",
+      "cat": "cat-0",
+      "sub": "sub-0-0",
+      "links": [
+        {
+          "label": "",
+          "url": "https://vector-pilot.pages.dev/"
+        }
+      ],
+      "files": [],
+      "createdAt": 1794790499111
+    },
+    {
       "desc": "기하 개념이 반영된 룰렛 사이트",
       "cat": "cat-0",
       "sub": "sub-0-0",
