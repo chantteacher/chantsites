@@ -46,19 +46,25 @@
       "updatedAt": 1794758960084
     },
     {
-      "desc": "공간좌표, 공간벡터 비행 훈련을 해보며 벡터 조종사가 되어보는 웹페이지.",
+      "desc": "공간좌표 개념이 반영된 드론 배송 미션 게임 링크. 교사용 현황판과 서버 연결 없는 버전.",
       "cat": "cat-0",
       "sub": "sub-0-0",
-      "id": "mwijx89zkni5",
-      "title": "벡터 파일럿",
+      "id": "760c28eb-66c8-43f8-9d92-2c82ce09cca9",
+      "title": "3D 우리 학교 드론 배송 미션",
       "links": [
         {
           "label": "",
-          "url": "https://vector-pilot.pages.dev/"
+          "url": "https://geometry-3d-drone-game.pages.dev/"
         }
       ],
-      "files": [],
-      "createdAt": 1794790499111
+      "files": [
+        {
+          "path": "embedded/legacy-3.pdf",
+          "fileName": "드론배송_안내문_1장.pdf",
+          "sizeBytes": 102364
+        }
+      ],
+      "updatedAt": 1794758973268
     },
     {
       "desc": "그림을 행렬로 바꾸고, 행렬 계산만으로 AI가 그림이 무엇인지 맞히는 원리를 체험하는 웹페이지.",
@@ -107,25 +113,19 @@
       "files": []
     },
     {
-      "desc": "공간좌표 개념이 반영된 드론 배송 미션 게임 링크. 교사용 현황판과 서버 연결 없는 버전.",
+      "desc": "공간좌표, 공간벡터 비행 훈련을 해보며 벡터 조종사가 되어보는 웹페이지.",
       "cat": "cat-0",
       "sub": "sub-0-0",
-      "id": "760c28eb-66c8-43f8-9d92-2c82ce09cca9",
-      "title": "3D 우리 학교 드론 배송 미션",
+      "id": "mwijx89zkni5",
+      "title": "벡터 파일럿",
       "links": [
         {
           "label": "",
-          "url": "https://geometry-3d-drone-game.pages.dev/"
+          "url": "https://vector-pilot.pages.dev/"
         }
       ],
-      "files": [
-        {
-          "path": "embedded/legacy-3.pdf",
-          "fileName": "드론배송_안내문_1장.pdf",
-          "sizeBytes": 102364
-        }
-      ],
-      "updatedAt": 1794758973268
+      "files": [],
+      "createdAt": 1794790499111
     },
     {
       "desc": "크리스마스가 다가오고 있는 이 시점에, 썰매 타고 달리면서 설산의 풍경을 바라보고 마음의 평안을 찾고자 만든 웹페이지.",
