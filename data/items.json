@@ -31,6 +31,21 @@
   ],
   "items": [
     {
+      "id": "mwj5hclzbuey",
+      "title": "문서 다이어트",
+      "desc": "문서 파일의 용량을 압축하거나, 원하는 페이지만 따로 또는 잘라서 저장 가능하도록 한 웹페이지.",
+      "cat": "cat-1",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://file-diet.pages.dev/"
+        }
+      ],
+      "files": [],
+      "createdAt": 1794826709783
+    },
+    {
       "desc": "기하 개념이 반영된 룰렛 사이트",
       "cat": "cat-0",
       "sub": "sub-0-0",
