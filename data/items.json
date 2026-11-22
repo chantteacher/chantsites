@@ -31,11 +31,26 @@
   ],
   "items": [
     {
-      "id": "mwp3gwqzhta6",
-      "title": "구구단 별따기",
+      "id": "mwrm02dixjkc",
+      "title": "학급노트",
+      "desc": "학급노트 체험판입니다.",
+      "cat": "cat-1",
+      "sub": null,
+      "links": [
+        {
+          "label": "",
+          "url": "https://hakgeupnote-show-version.pages.dev/"
+        }
+      ],
+      "files": [],
+      "createdAt": 1795338186246
+    },
+    {
       "desc": "구구단 게임입니다.",
       "cat": "cat-2",
       "sub": null,
+      "id": "mwp3gwqzhta6",
+      "title": "구구단 별따기",
       "links": [
         {
           "label": "",
