@@ -31,11 +31,11 @@
   ],
   "items": [
     {
-      "id": "mwrm02dixjkc",
-      "title": "학급노트",
       "desc": "학급노트 체험판입니다.",
       "cat": "cat-1",
       "sub": null,
+      "id": "mwrm02dixjkc",
+      "title": "학급노트",
       "links": [
         {
           "label": "",
@@ -95,7 +95,7 @@
       "cat": "cat-0",
       "sub": "sub-0-0",
       "id": "a910ab72-ffb8-46a0-aadd-ab65ad4391cf",
-      "title": "이차곡선 FOCUS 동물병원",
+      "title": "이차곡선 FOCUS 동물병원🐶",
       "links": [
         {
           "label": "",
@@ -103,7 +103,7 @@
         }
       ],
       "files": [],
-      "updatedAt": 1794790257854
+      "updatedAt": 1795426365763
     },
     {
       "desc": "그림을 행렬로 바꾸고, 행렬 계산만으로 AI가 그림이 무엇인지 맞히는 원리를 체험하는 웹페이지.",
